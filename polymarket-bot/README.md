@@ -146,6 +146,28 @@ Each line in the JSONL file must be a JSON object matching `MarketSnapshot`:
 
 ---
 
+## Dashboard (Streamlit UI)
+
+A multi-page Streamlit dashboard is included for monitoring and analysis.
+
+```bash
+streamlit run ui/app.py
+# or
+python scripts/run_ui.py
+```
+
+Open http://localhost:8501 in your browser. Pages:
+
+| Page | Description |
+|---|---|
+| 🏠 **Dashboard** | Account state, open paper positions, recent decisions |
+| 📋 **Trade Log** | Filterable history of all paper trades with download |
+| 📊 **Markets** | Live engineered features fetched from Polymarket |
+| 🔬 **Backtest** | Equity curve, drawdown chart, and performance metrics |
+| ⚙️ **Config** | Current risk parameters and credential status |
+
+---
+
 ## Running Tests
 
 ```bash
