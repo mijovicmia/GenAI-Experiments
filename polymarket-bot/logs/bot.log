@@ -1,0 +1,46 @@
+2026-03-18T17:43:17 | ERROR    | bot.claude_client | Claude returned invalid JSON: Expecting value: line 1 column 1 (char 0)
+2026-03-18T17:43:17 | ERROR    | bot.claude_client | Claude response is not a JSON array
+2026-03-18T17:43:17 | WARNING  | bot.claude_client | Skipping malformed action {'action': 'INVALID_ACTION', 'reason': 'bad'}: 1 validation error for TradeAction
+action
+  Input should be 'BUY', 'SELL', 'EXIT' or 'HOLD' [type=literal_error, input_value='INVALID_ACTION', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/literal_error
+2026-03-18T17:43:17 | WARNING  | bot.claude_client | No valid actions parsed from Claude response
+2026-03-18T17:43:17 | INFO     | bot.decision_engine | Calling Claude with 2 markets and 0 positions
+2026-03-18T17:43:17 | WARNING  | bot.decision_engine | Dropping action for unknown market_id=unknown_market
+2026-03-18T17:43:17 | INFO     | bot.decision_engine | Decision engine returning 1 action(s): [('HOLD', None)]
+2026-03-18T17:43:17 | INFO     | bot.decision_engine | Calling Claude with 2 markets and 0 positions
+2026-03-18T17:43:17 | INFO     | bot.decision_engine | Decision engine returning 1 action(s): [('BUY', 'mkt1')]
+2026-03-18T17:43:17 | INFO     | bot.decision_engine | Calling Claude with 1 markets and 0 positions
+2026-03-18T17:43:17 | WARNING  | bot.decision_engine | Dropping action for unknown market_id=ghost
+2026-03-18T17:43:17 | INFO     | bot.decision_engine | All actions filtered out — inserting HOLD
+2026-03-18T17:43:17 | INFO     | bot.decision_engine | Decision engine returning 1 action(s): [('HOLD', None)]
+2026-03-18T17:43:17 | WARNING  | bot.exchange_client | py-clob-client not installed — ExchangeClient will run in stub mode.
+2026-03-18T17:43:17 | INFO     | bot.exchange_client | [STUB] place_order token=tok1 side=BUY size=50.0000 price=0.4500
+2026-03-18T17:43:17 | INFO     | bot.exchange_client | [STUB] cancel_order id=order-abc
+2026-03-18T17:43:38 | ERROR    | bot.claude_client | Claude returned invalid JSON: Expecting value: line 1 column 1 (char 0)
+2026-03-18T17:43:38 | ERROR    | bot.claude_client | Claude response is not a JSON array
+2026-03-18T17:43:38 | WARNING  | bot.claude_client | Skipping malformed action {'action': 'INVALID_ACTION', 'reason': 'bad'}: 1 validation error for TradeAction
+action
+  Input should be 'BUY', 'SELL', 'EXIT' or 'HOLD' [type=literal_error, input_value='INVALID_ACTION', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/literal_error
+2026-03-18T17:43:38 | WARNING  | bot.claude_client | No valid actions parsed from Claude response
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Calling Claude with 2 markets and 0 positions
+2026-03-18T17:43:38 | WARNING  | bot.decision_engine | Dropping action for unknown market_id=unknown_market
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Decision engine returning 1 action(s): [('HOLD', None)]
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Calling Claude with 1 markets and 0 positions
+2026-03-18T17:43:38 | WARNING  | bot.decision_engine | Dropping action with non-positive size=-10.0000 for mkt1
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | All actions filtered out — inserting HOLD
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Decision engine returning 1 action(s): [('HOLD', None)]
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Calling Claude with 1 markets and 0 positions
+2026-03-18T17:43:38 | WARNING  | bot.decision_engine | Dropping action with out-of-range limit_price=1.5000 for mkt1
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | All actions filtered out — inserting HOLD
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Decision engine returning 1 action(s): [('HOLD', None)]
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Calling Claude with 2 markets and 0 positions
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Decision engine returning 1 action(s): [('BUY', 'mkt1')]
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Calling Claude with 1 markets and 0 positions
+2026-03-18T17:43:38 | WARNING  | bot.decision_engine | Dropping action for unknown market_id=ghost
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | All actions filtered out — inserting HOLD
+2026-03-18T17:43:38 | INFO     | bot.decision_engine | Decision engine returning 1 action(s): [('HOLD', None)]
+2026-03-18T17:43:38 | WARNING  | bot.exchange_client | py-clob-client not installed — ExchangeClient will run in stub mode.
+2026-03-18T17:43:38 | INFO     | bot.exchange_client | [STUB] place_order token=tok1 side=BUY size=50.0000 price=0.4500
+2026-03-18T17:43:38 | INFO     | bot.exchange_client | [STUB] cancel_order id=order-abc
