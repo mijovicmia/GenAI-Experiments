@@ -1,3 +1,19 @@
 .venv
 models
 poetry.lock
+
+# Bot logs (runtime-generated)
+logs/*.log
+logs/*.csv
+logs/*.jsonl
+polymarket-bot/logs/*.log
+polymarket-bot/logs/*.csv
+polymarket-bot/logs/*.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
